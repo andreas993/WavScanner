@@ -352,4 +352,4 @@ OUTPUT:
 
 ---
 
-That's the complete picture! The code reads binary data directly from the WAV file, extracts the format information from the `"fmt "` chunk, gets the data size from the `"data"` chunk, and calculates the duration using simple arithmetic. Would you like me to clarify any specific part?
+That's the complete picture! The code reads binary data directly from the WAV file, extracts the format information from the `"fmt "` chunk, gets the data size from the `"data"` chunk, and calculates the duration using simple arithmetic.
