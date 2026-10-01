@@ -1,21 +1,25 @@
 #ifndef WAVSCANNER_WAVINFO_H
 #define WAVSCANNER_WAVINFO_H
 #include <string>
+#include <cstdint>
+#include <filesystem>
 
 
 struct WavInfo {
 private:
     std::string mFilename;
-    std::string mSampleRate;
-    std::string mBitDepth;
-    std::string mChannels;
-    int mDurationSeconds;
+    int mSampleRate;
+    int mBitDepth;
+    int mChannels;
+    double mDurationSeconds;
 
 public:
-    WavInfo(std::string fileName, std::string sampleRate, std::string bitDepth, std::string channels,
-            int durationSeconds);
+    WavInfo(std::string fileName, int sampleRate, int bitDepth, int channels,
+            double durationSeconds);
 
-    void outputData();
+    void outputData() const;
+
+    static WavInfo parse(const std::filesystem::path& filepath);
 };
 
 
