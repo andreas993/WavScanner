@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(WavScanner main.cpp
         WavInfo.cpp
-        WavInfo.h)
+        WavInfo.h
+        FileHandler.cpp
+        FileHandler.h)

@@ -5,21 +5,22 @@
 #include <filesystem>
 
 
-struct WavInfo {
-private:
-    std::string mFilename;
-    int mSampleRate;
-    int mBitDepth;
-    int mChannels;
-    double mDurationSeconds;
+struct WavInfo
+{
+    private:
+        std::string mFilename;
+        int mSampleRate;
+        int mBitDepth;
+        int mChannels;
+        double mDurationSeconds;
 
-public:
-    WavInfo(std::string fileName, int sampleRate, int bitDepth, int channels,
-            double durationSeconds);
+    public:
+        WavInfo(std::string fileName, int sampleRate, int bitDepth, int channels,
+                double durationSeconds);
 
-    void outputData() const;
+        void outputData() const;
 
-    static WavInfo parse(const std::filesystem::path& filepath);
+        static WavInfo parse(const std::filesystem::path &filepath);
 };
 
 
